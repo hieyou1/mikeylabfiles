@@ -1,4 +1,4 @@
-push.sh
+./push.sh
 releaseme
 releaseme/*
 TOKEN
