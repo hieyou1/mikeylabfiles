@@ -33,8 +33,6 @@ else {
     } else if (typeIs("image")) {
         let image = document.createElement("img");
         image.src = loc;
-        image.width = "auto";
-        image.height = "auto";
         mbody.innerHTML = "";
         mbody.appendChild(image);
     } else window.location.href = loc;
