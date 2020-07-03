@@ -1,2 +1,9 @@
-let path = window.location.pathname;
-console.log(path);
+let url = new URL(window.location);
+if (url.pathname.lastIndexOf(".html") == url.pathname.length - 5) url.pathname += "/..";
+let arr = url.pathname.split("/");
+let split = [];
+for (let i of arr)
+    if (i != "")
+        split.push(i);
+let file = split[split.length - 1];
+console.log(file);
