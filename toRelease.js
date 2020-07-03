@@ -1,3 +1,4 @@
+if (!window.location.protocol.includes("https")) return window.location.protocol = "https:"
 let url = new URL(window.location);
 if (url.pathname.lastIndexOf(".html") == url.pathname.length - 5) url.pathname += "/..";
 let arr = url.pathname.split("/");
