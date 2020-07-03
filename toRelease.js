@@ -6,4 +6,4 @@ for (let i of arr)
     if (i != "")
         split.push(i);
 let file = split[split.length - 1];
-window.location.href = `https://github.com/hieyou1/mikeylabfiles/releases/${file}/${file}`;
+window.location.href = `https://github.com/hieyou1/mikeylabfiles/releases/download/${file}/${file}`;
