@@ -26,17 +26,20 @@ else {
             video.src = loc;
             mbody.innerHTML = "";
             mbody.appendChild(video);
+            document.title = "File";
         } else if (typeIs("audio")) {
             let audio = document.createElement("audio");
             audio.controls = true;
             audio.src = loc;
             mbody.innerHTML = "";
             mbody.appendChild(audio);
+            document.title = "File";
         } else if (typeIs("image")) {
             let image = document.createElement("img");
             image.src = loc;
             mbody.innerHTML = "";
             mbody.appendChild(image);
+            document.title = "File";
         } else window.location.href = loc;
     }
 }
