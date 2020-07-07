@@ -2,3 +2,5 @@
 releaseme
 releaseme/*
 TOKEN
+*node_module*
+*package-lock.jso*
