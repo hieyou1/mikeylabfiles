@@ -4,3 +4,4 @@ releaseme/*
 TOKEN
 *node_module*
 *package-lock.jso*
+*DS_Store
