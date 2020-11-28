@@ -24,8 +24,9 @@ else {
             let video = document.createElement("video");
             video.controls = true;
             video.src = loc;
-            video.style.width = "auto";
-            video.style.height = "auto";
+            video.onclick = () => {
+                video.requestFullscreen();
+            };
             mbody.innerHTML = "";
             mbody.appendChild(video);
             document.title = "File";
@@ -39,6 +40,9 @@ else {
         } else if (typeIs("image")) {
             let image = document.createElement("img");
             image.src = loc;
+            image.onclick = () => {
+                image.requestFullscreen();
+            };
             mbody.innerHTML = "";
             mbody.appendChild(image);
             document.title = "File";
