@@ -24,8 +24,11 @@ else {
             let video = document.createElement("video");
             video.controls = true;
             video.src = loc;
+            var clickRan = false;
             video.onclick = () => {
-                video.requestFullscreen();
+                if (!clickRan) video.requestFullscreen();
+                clickRan = true;
+                video.onclick = undefined;
             };
             mbody.innerHTML = "";
             mbody.appendChild(video);
@@ -40,8 +43,11 @@ else {
         } else if (typeIs("image")) {
             let image = document.createElement("img");
             image.src = loc;
+            var clickRan = false;
             image.onclick = () => {
-                image.requestFullscreen();
+                if (!clickRan) image.requestFullscreen();
+                clickRan = true;
+                image.onclick = undefined;
             };
             mbody.innerHTML = "";
             mbody.appendChild(image);
