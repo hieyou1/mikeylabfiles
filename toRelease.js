@@ -24,6 +24,8 @@ else {
             let video = document.createElement("video");
             video.controls = true;
             video.src = loc;
+            video.style.width = "auto";
+            video.style.height = "auto";
             mbody.innerHTML = "";
             mbody.appendChild(video);
             document.title = "File";
