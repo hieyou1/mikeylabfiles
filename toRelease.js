@@ -42,6 +42,7 @@
                 };
                 mbody.innerHTML = "";
                 mbody.appendChild(video);
+                if (UAParser().device.type == "mobile") mbody.innerHTML += `<br /><div>Video still doesn't work? <br /><a href="${loc}">Just download it.</a></div>`;
                 document.title = "File";
             } else if (typeIs("audio")) {
                 let audio = document.createElement("audio");
