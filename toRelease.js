@@ -30,7 +30,7 @@
                     mbody.innerText = "Mobile device or ?preload detected, hold on while we fetch your file to give you the best experience.";
                     let cres = await fetch(loc.replace("https://github.com/", "https://cors.mikeylab.com/github.com/"));
                     cres = await cres.blob();
-                    if ('srcObject' in HTMLMediaElement.prototype) video.srcObject = cres; else video.src = URL.createObjectURL(cres);
+                    video.src = URL.createObjectURL(cres);
                 } else {
                     video.src = loc;
                 }
