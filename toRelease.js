@@ -15,8 +15,8 @@ window.HELP_IMPROVE_VIDEOJS = false;
             window.location.href = loc;
         } else {
             // mime typing support
-            const mime = await import("https://cdn.skypack.dev/mime/lite");
-            let type = mime.getType(file);
+            const {default: {getType: mime}} = await import("https://cdn.skypack.dev/mime/lite");
+            let type = mime(file);
             const typeIs = (ltype) => {
                 return (type.indexOf(`${ltype}/`) == 0);
             }
