@@ -17,6 +17,7 @@
             let style = document.createElement("link");
             style.rel = "stylesheet";
             style.href = "https://vjs.zencdn.net/7.10.2/video-js.css";
+            document.head.appendChild(style);
             await new Promise((resolve) => {
                 style.onload = resolve;
             });
