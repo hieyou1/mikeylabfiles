@@ -1,3 +1,4 @@
+window.HELP_IMPROVE_VIDEOJS = false;
 (async () => {
     if (!window.location.protocol.includes("https")) window.location.protocol = "https:";
     else {
@@ -13,17 +14,6 @@
         if (url.searchParams.has("raw")) {
             window.location.href = loc;
         } else {
-            // video.js
-            let style = document.createElement("link");
-            style.rel = "stylesheet";
-            style.href = "https://vjs.zencdn.net/7.10.2/video-js.css";
-            document.head.appendChild(style);
-            await new Promise((resolve) => {
-                style.onload = resolve;
-            });
-            window.HELP_IMPROVE_VIDEOJS = false;
-            const videojs = await import("https://cdn.skypack.dev/video.js/video.min.js");
-            window.HELP_IMPROVE_VIDEOJS = false;
             // mime typing support
             const mime = await import("https://cdn.skypack.dev/mime/lite");
             let type = mime.getType(file);
